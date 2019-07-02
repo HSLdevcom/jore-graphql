@@ -5,9 +5,9 @@
   "author": "Hannes Junnila",
   "license": "MIT",
   "scripts": {
-    "start": "node --max-old-space-size=10000 node_modules/.bin/postgraphql -c $PG_CONNECTION_STRING --schema jore --disable-default-mutations --dynamic-json --cors --graphql /jore/graphql --graphiql /jore/graphiql --host 0.0.0.0"
+    "start": "node --max-old-space-size=2048 node_modules/.bin/postgraphile -c $PG_CONNECTION_STRING --schema jore --disable-default-mutations --dynamic-json --cors --graphql /jore/graphql --graphiql /jore/graphiql --host 0.0.0.0 --timeout 36000000 --cluster-workers 3 --disable-query-log"
   },
   "dependencies": {
-    "postgraphql": "^3.5.0"
+    "postgraphile": "^4.4.1"
   }
 }
