@@ -1,4 +1,4 @@
-FROM node:current
+FROM node:12
 
 ENV WORK /usr/src/app
 
@@ -8,8 +8,8 @@ WORKDIR ${WORK}
 COPY package.json ${WORK}/
 COPY yarn.lock ${WORK}/
 
-RUN yarn install
 COPY . ${WORK}
+RUN yarn install
 
 EXPOSE 5000
 
