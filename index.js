@@ -8,6 +8,7 @@ http.createServer(postgraphile(process.env.PG_CONNECTION_STRING, 'jore', {
   disableDefaultMutations: true,
   dynamicJson: true,
   enableCors: true,
+  watchPg: false,
   graphqlRoute: '/jore/graphql',
   graphiqlRoute: '/jore/graphiql',
   graphiql: true,
