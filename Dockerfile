@@ -11,6 +11,4 @@ COPY yarn.lock ${WORK}/
 COPY . ${WORK}
 RUN yarn install
 
-EXPOSE 5000
-
 CMD yarn start
