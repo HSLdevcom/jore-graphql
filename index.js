@@ -12,6 +12,7 @@ http.createServer(postgraphile(process.env.PG_CONNECTION_STRING, 'jore', {
   graphiqlRoute: '/graphiql',
   graphiql: true,
   host: '0.0.0.0',
+  retryOnInitFail: true,
   timeout: 36000000,
   disableQueryLog: true,
   appendPlugins: [ numericPlugin ]
