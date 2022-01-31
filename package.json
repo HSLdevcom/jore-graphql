@@ -8,8 +8,6 @@
     "start": "PG_CONNECTION_STRING=$PG_CONNECTION_STRING node index.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "forever": "^1.0.0",
     "fs-extra": "^9.0.1",
     "lodash": "^4.17.20",
     "postgraphile": "^4.4.1"

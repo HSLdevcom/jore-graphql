@@ -1,14 +1,13 @@
-FROM node:12
+FROM node:12-alpine
 
 ENV WORK /usr/src/app
 
 RUN mkdir -p ${WORK}
 WORKDIR ${WORK}
 
-COPY package.json ${WORK}/
-COPY yarn.lock ${WORK}/
+COPY package.json yarn.lock ${WORK}/
+RUN yarn install && yarn cache clean
 
 COPY . ${WORK}
-RUN yarn install
 
 CMD yarn start
