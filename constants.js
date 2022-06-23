@@ -1,5 +1,5 @@
 const { mapValues, orderBy } = require('lodash');
-const fs = require('fs-extra');
+const fs = require('fs');
 
 const SECRETS_PATH = '/run/secrets/';
 
