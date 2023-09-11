@@ -1,5 +1,6 @@
-FROM node:16-alpine
+FROM node:18-alpine
 
+ENV NODE_ENV production
 ENV WORK /usr/src/app
 
 RUN mkdir -p ${WORK}
@@ -10,4 +11,4 @@ RUN yarn install && yarn cache clean
 
 COPY . ${WORK}
 
-CMD yarn start
+CMD yarn start:production
