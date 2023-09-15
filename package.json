@@ -5,11 +5,13 @@
   "author": "Hannes Junnila",
   "license": "MIT",
   "scripts": {
-    "start": "PG_CONNECTION_STRING=$PG_CONNECTION_STRING node index.js"
+    "start": "node -r dotenv/config index.js",
+    "start:production": "node index.js"
   },
   "dependencies": {
-    "fs-extra": "^9.0.1",
-    "lodash": "^4.17.20",
-    "postgraphile": "^4.4.1"
+    "postgraphile": "^4.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
   }
 }
